@@ -176,6 +176,8 @@ If you have problems with the set-up you can contact us by email and we will be 
 
 Otherwise you can work during the MAD-X tutorial directly on a browser throught binder, we will provide you with the links but special attention has to be paid using this approach to save the progress by downloading and uploading the jupyter-notebooks. 
 
+You can try here https://mybinder.org/v2/gh/fusterma/MADX_JUAS2022/HEAD?filepath=test.ipynb
+
 # An example of Python3 notebook.
 Open a new Python3 jupyter notebook: NEW->Python 3 Notebook and copy and paste the following lines on the jupyter-notebook boxes and give it a try!
 
@@ -208,7 +210,6 @@ myK:=1/f/quadrupoleLenght;// m^-2
 QF: quadrupole, L=quadrupoleLenght, K1:=myK;
 QD: quadrupole, L=quadrupoleLenght, K1:=-myK;
 
-
 ! *********************************************************************
 ! Definition of sequence
 ! *********************************************************************
@@ -236,7 +237,6 @@ twiss, file=myFirstTwiss.twiss;
 '''
 myMad.input(myString);
 ```
-
 You can see the *Q1* and *betymax* parameters by executing this cell
 ``` python
 myString='''
@@ -253,7 +253,6 @@ myDF[['name','s','betx','bety']].head()
 You should get something like
 ![](https://codimd.web.cern.ch/uploads/upload_6ffb4ff57ec6f11c385e9a405604b1c3.png)
 
-
 To plot some data of the *twiss* table you can execute
 ``` python
 plt.plot(myDF['s'],myDF['betx'],'ob-')
@@ -265,7 +264,6 @@ plt.ylabel('[m]')
 plt.title('My first FODO cell')
 ```
 ![](https://codimd.web.cern.ch/uploads/upload_468cfab86d69ef405edce079a68b399f.png)
-
 
 You can do also a bit of symbolic computation with 
 
@@ -279,7 +277,6 @@ L_cell=sy.Symbol('L_cell', positive=True);
 f_1=sy.Symbol('f_1', positive=True);
 f_2=sy.Symbol('f_2', positive=True);
 f=sy.Symbol('f', positive=True);
-
 
 QF=sy.Matrix([[1,0], [-1/f,1]])
 DRIFT=sy.Matrix([[1,L_cell/2], [0,1]])
