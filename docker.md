@@ -11,11 +11,11 @@ Jupyter is a user-friendly environment to work with Python. You can find an over
 
 ## Working environment and Jupyter notebooks set-up
 We provide the following approaches to set-up the working environment for the MAD-X course:
-- Install and run a Docker image we have prepared for you.
-- Install python and packges using Anaconda.
-- Use Binder.
+- Install Docker and run a Docker image we have prepared for you (to work locally in your PC).
+- Install python and packges using Anaconda (to work locally in your PC).
+- Use Binder (to work online on a browser).
 
-The first two approaches allow you to work locally in your computer while the third one not. We recommend you to work locally in your computer as it will be easier to save your work and keep the tool for private use later, but the third option to work directly on a browser is also available in case you have problems with the local set-up. 
+The first two approaches allow you to work locally in your computer while the third one not. We recommend you to work locally in your PC as it will be easier to save your work and keep the tool for private use later, but the third option to work directly on a browser is also available in case you have problems with the local set-up. 
 
 In the following we will explain how to **install locally** the required software: we propose different approaches for OSX, Windows and UNIX systems, respectively.
 
@@ -35,8 +35,13 @@ Please install the [Docker Desktop](https://www.docker.com/products/docker-deskt
 
 Once the Docker Desktop is installed and running, open a terminal and run the instruction
 ``` bash
->> docker run --rm -p 8888:8888 -v $HOME:/src/juas/  juastest/juas2022
+>> docker run --rm -p 8888:8888 -v $PWD:/src/juas/  juastest/juas2022
 ```
+:::info
+The argument **$PWD:/src/juas/** on the command line makes the synchronization between the docker image folder and your local machine. It is important that you set-up the Docker Desktop configuration to allow it by adding the path to your Desktop on: Docker Preferences -> Resources -> File sharing. The procedure is llustrated here: <img width="1429" alt="Captura de pantalla 2021-12-15 a las 18 43 46" src="https://user-images.githubusercontent.com/72798799/146238094-7e75702d-9f87-4ad5-9d7e-5ae9d2dbf8c1.png">
+
+:::
+
 This will download the image (~5GB): an internet connection is needed **only for the first time**, afterwords you can work offline. 
 In addition, this command binds your home directory to inside the docker container such that you can save and load notebooks.
 You should get something as
@@ -81,7 +86,7 @@ For UNIX system the simplest way to install Python environment on your laptop is
 http://docs.continuum.io/anaconda/
 
 ### STEP 1: Anaconda installation
-We suggest to install the Python 3.8 version (latest now, December 2020)
+We suggest to install the Python 3.9 version (latest)
 https://www.anaconda.com/distribution/
 List the packages that are installed with
 ```
@@ -118,7 +123,13 @@ You can clic on the NEW->Python 3 Notebook icon on the top right (https://user-i
 
 # Windows: Docker Toolbox
 
-If you have Windows 10 Professional or Enterprise you can follow the instructions given for OSX. The other Windows versions are not compatible with **Docker Desktop**.
+If you have **Windows 10 Professional or Enterprise** you can follow **the instructions given for OSX**. 
+
+:::info
+In order to have Docker running properly the virtualization needs to be activated. If you have problems running Docker due to this problem please follow the steps explained here: https://mashtips.com/enable-virtualization-windows-10/.
+:::
+
+The other Windows versions are not compatible with **Docker Desktop**.
 In alternative to **Docker Desktop**, there is a legacy software caller **Docker Toolbox** (we tested it on Windons 10 Home). This comes with an Oracle Virtual Box where you will run the Docker Image.
 
 ### STEP 1: Docker Toolbox installation
@@ -144,7 +155,7 @@ Now open the Docker Quickstart (icon on the Desktop). It will take some time to 
 Then type
 
 ```bash
->> docker run -p 8888:8888 -v $HOME:/src/juas/  juastest/juas2022
+>> docker run -p 8888:8888 -v $PWD:/src/juas/  juastest/juas2022
 ```
 This download the docker image (only for the first time, ~5 GB) and run it.
 
@@ -174,9 +185,11 @@ You can clic on the NEW->Python 3 Notebook icon on the top right (https://user-i
 
 If you have problems with the set-up you can contact us by email and we will be happy to help (nuria.fuster@ific.uv.es).
 
-Otherwise you can work during the MAD-X tutorial directly on a browser throught binder, we will provide you with the links but special attention has to be paid using this approach to save the progress by downloading and uploading the jupyter-notebooks. 
+Otherwise you can work during the MAD-X tutorial directly on a browser throught binder (https://mybinder.org/). We will provide you with the links to the jupyter-notebooks but special attention has to be paid using this approach to save the progress by downloading and uploading the jupyter-notebooks or the progress will be lost. 
 
 You can try here https://mybinder.org/v2/gh/fusterma/MADX_JUAS2022/HEAD?filepath=test.ipynb
+
+You can clic on the NEW->Python 3 Notebook icon on the top right (https://user-images.githubusercontent.com/72798799/146044142-2c6c33bb-427c-4326-80a2-a2642bc0833e.png) and test the code example at the end of this document to verify that everything is working as expected.
 
 # An example of Python3 notebook.
 Open a new Python3 jupyter notebook: NEW->Python 3 Notebook and copy and paste the following lines on the jupyter-notebook boxes and give it a try!
