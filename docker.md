@@ -187,7 +187,7 @@ You can clic on the NEW->Python 3 Notebook icon on the top right (https://user-i
 
 If you have problems with the set-up you can contact us by email and we will be happy to help (nuria.fuster@ific.uv.es).
 
-Otherwise you can work during the MAD-X tutorial directly on a browser throught binder (https://mybinder.org/). We will provide you with the links to the jupyter-notebooks but special attention has to be paid using this approach to save the progress by downloading and uploading the jupyter-notebooks or the progress will be lost. 
+Otherwise you can work during the MAD-X tutorial directly on a browser through binder (https://mybinder.org/). We will provide you with the links to the jupyter-notebooks but special attention has to be paid using this approach to save the progress by downloading and uploading the jupyter-notebooks or the progress will be lost. 
 
 You can try here https://mybinder.org/v2/gh/fusterma/MADX_JUAS2022/HEAD?filepath=test.ipynb
 
