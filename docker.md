@@ -126,7 +126,9 @@ You can clic on the NEW->Python 3 Notebook icon on the top right (https://user-i
 If you have **Windows 10 Professional or Enterprise** you can follow **the instructions given for OSX**. 
 
 :::info
+
 In order to have Docker running properly the virtualization needs to be activated. If you have problems running Docker due to this problem please follow the steps explained here: https://mashtips.com/enable-virtualization-windows-10/.
+
 :::
 
 The other Windows versions are not compatible with **Docker Desktop**.
