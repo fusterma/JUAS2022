@@ -7,7 +7,7 @@ For this course a **basic knowledge of Python is assumed**, in case you are not 
 During the course we will use Python3 in a Jupyter notebook and, mostly, the *numpy*, *matplotlib*, *pandas* and *cpymad* packages. 
 
 ## Jupyter-notebooks
-Jupyter is a user-friendly environment to work with Python. You can find an overview on [here](https://jupyter.org/).
+Jupyter is a user-friendly environment to work with Python. You can find an overview [here](https://jupyter.org/).
 
 ## Working environment and Jupyter notebooks set-up
 We provide the following approaches to set-up the working environment for the MAD-X course:
@@ -129,7 +129,7 @@ You can clic on the NEW->Python 3 Notebook icon on the top right (https://user-i
 # Windows: Docker Desktop
 
 ### STEP 1: install
-If you have **Windows 10 Home, Professional or Enterprise** you can follow **the instructions given for OSX** and install the Docker Desktop from here https://docs.docker.com/desktop/windows/install/ .
+If you have **Windows 10 Home, Professional or Enterprise** you can follow **the instructions given for OSX** and install the Docker Desktop from [here](https://docs.docker.com/desktop/windows/install/) .
 
 :::info
 
@@ -151,11 +151,12 @@ Then type
 ```
 This download the docker image (only for the first time, ~5 GB) and run it.
 
-You will get something like
-![](![test](https://user-images.githubusercontent.com/72798799/146367178-20318779-e336-4de1-870e-61562f2d16c3.png)
+You will get something like (https://user-images.githubusercontent.com/72798799/146367178-20318779-e336-4de1-870e-61562f2d16c3.png)
 
 :::info
+
 **The last line is the most important one**.
+
 :::
 
 ### STEP 3: open Jupyter from a browser
@@ -164,7 +165,7 @@ Open a web browser and connect to the python server at (**in this case**, see th
 http://127.0.0.1:8888/?token=HereGoesYourAlphanumericToken
 
 
-It will open a browser and you should get something as 
+It will open a browser and you should get something like 
 ![](https://user-images.githubusercontent.com/72798799/146044142-2c6c33bb-427c-4326-80a2-a2642bc0833e.png)
 
 You can clic on the NEW->Python 3 Notebook icon on the top right (https://user-images.githubusercontent.com/72798799/146044142-2c6c33bb-427c-4326-80a2-a2642bc0833e.png) and test the code example at the end of this document to verify that everything is working as expected.
