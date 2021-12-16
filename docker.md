@@ -21,9 +21,9 @@ In the following we will explain how to **install locally** the required softwar
 
 For **OSX** users, please follow the instructions in the *OSX: Install and run a Docker image* section.
 
-For the **Windows** users, please follow  the instructions in the *Windows: Docker Toolbox* section.
-
 For **UNIX** users, please follow  the instructions in the instructions in the *UNIX: Anaconda + cpymad* section.
+
+For the **Windows** users, please follow  the instructions in the *Windows: Docker Desktop* section.
 
 # OSX: install and run a Docker image
 In order to  ease the installation procedure, we prepared a virtual environment that launch a Python3 Jupyter server (the installation on *cpymad* on OSX can be tricky, so we suggest to use the Docker image as suggested).
@@ -38,6 +38,7 @@ Once the Docker Desktop is installed and running, open a terminal and run the in
 >> docker run --rm -p 8888:8888 -v $PWD:/src/juas/  juastest/juas2022
 ```
 :::info
+
 The argument **$PWD:/src/juas/** on the command line makes the synchronization between the docker image folder and your local machine. It is important that you set-up the Docker Desktop configuration to allow it by adding the path to your Desktop on: Docker Preferences -> Resources -> File sharing. The procedure is llustrated here: <img width="1429" alt="Captura de pantalla 2021-12-15 a las 18 43 46" src="https://user-images.githubusercontent.com/72798799/146238094-7e75702d-9f87-4ad5-9d7e-5ae9d2dbf8c1.png">
 
 :::
@@ -45,6 +46,7 @@ The argument **$PWD:/src/juas/** on the command line makes the synchronization b
 This will download the image (~5GB): an internet connection is needed **only for the first time**, afterwords you can work offline. 
 In addition, this command binds your home directory to inside the docker container such that you can save and load notebooks.
 You should get something as
+
 ```bash
 MACBE16107:Tutorials sterbini$ docker run -p 8888:8888 -v "$PWD":/juas sterbini/juas
 [I 08:37:31.108 LabApp] Writing notebook server cookie secret to /cas/.local/share/jupyter/runtime/notebook_cookie_secret
@@ -64,8 +66,11 @@ MACBE16107:Tutorials sterbini$ docker run -p 8888:8888 -v "$PWD":/juas sterbini/
         http://(4bd247dca0ba or 127.0.0.1):8888/?token=ea65f062bfce037fd7a3b47926393a0d5ded381785b0136b
 ```
 :::info
+
 **The last line is the most important one**.
+
 :::
+
 
 ### STEP 3: open a jupyter-notebook from a browser
 
@@ -121,9 +126,10 @@ The *jupyter-notebook* command will open a browser.
 
 You can clic on the NEW->Python 3 Notebook icon on the top right (https://user-images.githubusercontent.com/72798799/146044142-2c6c33bb-427c-4326-80a2-a2642bc0833e.png) and test the code example at the end of this document to verify that everything is working as expected.
 
-# Windows: Docker Toolbox
+# Windows: Docker Desktop
 
-If you have **Windows 10 Professional or Enterprise** you can follow **the instructions given for OSX**. 
+### STEP 1: install
+If you have **Windows 10 Home, Professional or Enterprise** you can follow **the instructions given for OSX** and install the Docker Desktop from here https://docs.docker.com/desktop/windows/install/ .
 
 :::info
 
@@ -131,29 +137,13 @@ In order to have Docker running properly the virtualization needs to be activate
 
 :::
 
-The other Windows versions are not compatible with **Docker Desktop**.
-In alternative to **Docker Desktop**, there is a legacy software caller **Docker Toolbox** (we tested it on Windons 10 Home). This comes with an Oracle Virtual Box where you will run the Docker Image.
+### STEP 2:launch the docker image
 
-### STEP 1: Docker Toolbox installation
-Download **Docker Toolbox** from https://github.com/docker/toolbox/releases/download/v18.09.3/DockerToolbox-18.09.3.exe
-
-Install it (using custom configuration).
-
-### STEP 2: redirect the port 8888
-You have to redirect the port 8888 of the virtual machine to the localhost port 50000 (you can use another free port if you like or if port the 50000 is already in use). This can be done from the [Oracle VM VirtualBox](https://www.virtualbox.org/) (icon on your desktop) accessing the menu of the default Virtual machine:
-'Settings'->-'Network'->-'Advanced'->-'Port Forwarding'.
-Add ('+' icon on the top/right) a rule as shown in the following screenshot
-![](https://codimd.web.cern.ch/uploads/upload_a04d3eb6edaabf1a0a412c560f89519f.png)
-
-This means that you can access the port 8888 of the virtual machine from the port 50000 of the localhost (127.0.0.1).
-
-### STEP 3: install and launch the docker image
-Now open the Docker Quickstart (icon on the Desktop). It will take some time to start the virtual machine. Then move to your home folder typing 
+Now open the Docker Quickstart (icon on the Desktop). It will take some time to start the virtual machine. Then open a Command Prompt window using the cmd program and move to your home folder typing
 
 ```bash
 >> cd
 ```
-
 Then type
 
 ```bash
@@ -168,13 +158,13 @@ You will get something like
 **The last line is the most important one**.
 :::
 
-### STEP 4: open Jupyter from a browser
+### STEP 3: open Jupyter from a browser
 
 Open a web browser and connect to the python server at (**in this case**, see the last line of the previous screenshot)
 http://127.0.0.1:50000/?token=HereGoesYourAlphanumericToken
 
 :::danger
-You have to copy, paste and **edit** the last line on the address field of your browser. **Please remember to replace the port 8888 with the port 50000.**
+You have to copy, paste and **edit** the last line on the address field of your browser. 
 :::
 
 It will open a browser and you should get something as 
@@ -187,7 +177,7 @@ You can clic on the NEW->Python 3 Notebook icon on the top right (https://user-i
 
 If you have problems with the set-up you can contact us by email and we will be happy to help (nuria.fuster@ific.uv.es).
 
-Otherwise you can work during the MAD-X tutorial directly on a browser through binder (https://mybinder.org/). We will provide you with the links to the jupyter-notebooks but special attention has to be paid using this approach to save the progress by downloading and uploading the jupyter-notebooks or the progress will be lost. 
+Otherwise you can work during the MAD-X tutorial directly on a browser through binder (https://mybinder.org/). We will provide you with the links to the jupyter-notebooks but special attention has to be paid using this approach to save the progress by downloading the jupyter-notebooks at the end of the workshop or your progress will be lost. 
 
 You can try here https://mybinder.org/v2/gh/fusterma/MADX_JUAS2022/HEAD?filepath=test.ipynb
 
