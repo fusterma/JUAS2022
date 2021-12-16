@@ -37,12 +37,6 @@ Once the Docker Desktop is installed and running, open a terminal and run the in
 ``` bash
 >> docker run --rm -p 8888:8888 -v $PWD:/src/juas/  juastest/juas2022
 ```
-:::info
-
-The argument **$PWD:/src/juas/** on the command line makes the synchronization between the docker image folder and your local machine. It is important that you set-up the Docker Desktop configuration to allow it by adding the path to your Desktop on: Docker Preferences -> Resources -> File sharing. The procedure is llustrated here: <img width="1429" alt="Captura de pantalla 2021-12-15 a las 18 43 46" src="https://user-images.githubusercontent.com/72798799/146238094-7e75702d-9f87-4ad5-9d7e-5ae9d2dbf8c1.png">
-
-:::
-
 This will download the image (~5GB): an internet connection is needed **only for the first time**, afterwords you can work offline. 
 In addition, this command binds your home directory to inside the docker container such that you can save and load notebooks.
 You should get something as
@@ -71,13 +65,18 @@ MACBE16107:Tutorials sterbini$ docker run -p 8888:8888 -v "$PWD":/juas sterbini/
 
 :::
 
+:::info
+
+The argument **$PWD:/src/juas/** on the command line makes the synchronization between the docker image folder and your local machine. It is important that you set-up the Docker Desktop configuration to allow it by adding the path to your Desktop on: Docker Preferences -> Resources -> File sharing. The procedure is llustrated here: <img width="1429" alt="Captura de pantalla 2021-12-15 a las 18 43 46" src="https://user-images.githubusercontent.com/72798799/146238094-7e75702d-9f87-4ad5-9d7e-5ae9d2dbf8c1.png">
+
+:::
 
 ### STEP 3: open a jupyter-notebook from a browser
 
 Open a web browser and connect to the python server at (**in this case**, check the last line)
 http://127.0.0.1:8888/?token=ea65f062bfce037fd7a3b47926393a0d5ded381785b0136b
 
-You have to copy, paste and **edit** the last line on the address field of your browser.
+You have to copy and paste the last line on the address field of your browser.
 
 You should see something like https://user-images.githubusercontent.com/72798799/146044142-2c6c33bb-427c-4326-80a2-a2642bc0833e.png but with the folders on your Desktop.
 
@@ -88,11 +87,12 @@ Now you can create a new folder where to save your jupyter-notebook (right top b
 # UNIX: Anaconda distribution
 
 For UNIX system the simplest way to install Python environment on your laptop is to setup manually your environment by installing [*anaconda*](http://docs.continuum.io/_downloads/9ee215ff15fde24bf01791d719084950/Anaconda-Starter-Guide.pdf) from  
-http://docs.continuum.io/anaconda/ (go to the botto of the web page).
+http://docs.continuum.io/anaconda/ (go to the bottom of the web page).
 
 ### STEP 1: Anaconda installation
 We suggest to install the Python 3.9 version (latest)
-https://www.anaconda.com/distribution/
+https://www.anaconda.com/distribution/. 
+
 List the packages that are installed with
 ```
 >> conda list
@@ -147,12 +147,12 @@ Now open the Docker Quickstart (icon on the Desktop). It will take some time to 
 Then type
 
 ```bash
->> docker run -p 8888:8888 -v $PWD:/src/juas/  juastest/juas2022
+>> docker run -p 8888:8888 -v %cd%:/src/juas/  juastest/juas2022
 ```
 This download the docker image (only for the first time, ~5 GB) and run it.
 
 You will get something like
-![](https://codimd.web.cern.ch/uploads/upload_8fe231a7c6b3663bfe9db5a8f78366ca.png)
+![](![test](https://user-images.githubusercontent.com/72798799/146367178-20318779-e336-4de1-870e-61562f2d16c3.png)
 
 :::info
 **The last line is the most important one**.
