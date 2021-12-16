@@ -17,7 +17,7 @@ We provide the following approaches to set-up the working environment for the MA
 
 The first two approaches allow you to work locally in your computer while the third one not. We recommend you to work locally in your PC as it will be easier to save your work and keep the tool for private use later, but the third option to work directly on a browser is also available in case you have problems with the local set-up. 
 
-In the following we will explain how to **install locally** the required software: we propose different approaches for OSX, Windows and UNIX systems, respectively.
+In the following we will explain how to **install locally** the required software: we propose different approaches for OSX, UNIX and Windows systems, respectively.
 
 For **OSX** users, please follow the instructions in the *OSX: Install and run a Docker image* section.
 
@@ -63,7 +63,7 @@ MACBE16107:Tutorials sterbini$ docker run -p 8888:8888 -v "$PWD":/juas sterbini/
     
     Copy/paste this URL into your browser when you connect for the first time,
     to login with a token:
-        http://(4bd247dca0ba or 127.0.0.1):8888/?token=ea65f062bfce037fd7a3b47926393a0d5ded381785b0136b
+        http://127.0.0.1:8888/?token=ea65f062bfce037fd7a3b47926393a0d5ded381785b0136b
 ```
 :::info
 
@@ -79,7 +79,7 @@ http://127.0.0.1:8888/?token=ea65f062bfce037fd7a3b47926393a0d5ded381785b0136b
 
 You have to copy, paste and **edit** the last line on the address field of your browser.
 
-You should see something like https://user-images.githubusercontent.com/72798799/146044142-2c6c33bb-427c-4326-80a2-a2642bc0833e.png .
+You should see something like https://user-images.githubusercontent.com/72798799/146044142-2c6c33bb-427c-4326-80a2-a2642bc0833e.png but with the folders on your Desktop.
 
 This Jupyter-notebook environment is setup with the software needed for the MAD-X tutorials.
 
@@ -88,7 +88,7 @@ Now you can create a new folder where to save your jupyter-notebook (right top b
 # UNIX: Anaconda distribution
 
 For UNIX system the simplest way to install Python environment on your laptop is to setup manually your environment by installing [*anaconda*](http://docs.continuum.io/_downloads/9ee215ff15fde24bf01791d719084950/Anaconda-Starter-Guide.pdf) from  
-http://docs.continuum.io/anaconda/
+http://docs.continuum.io/anaconda/ (go to the botto of the web page).
 
 ### STEP 1: Anaconda installation
 We suggest to install the Python 3.9 version (latest)
@@ -161,14 +161,10 @@ You will get something like
 ### STEP 3: open Jupyter from a browser
 
 Open a web browser and connect to the python server at (**in this case**, see the last line of the previous screenshot)
-http://127.0.0.1:50000/?token=HereGoesYourAlphanumericToken
+http://127.0.0.1:8888/?token=HereGoesYourAlphanumericToken
 
-:::danger
-You have to copy, paste and **edit** the last line on the address field of your browser. 
-:::
 
 It will open a browser and you should get something as 
-
 ![](https://user-images.githubusercontent.com/72798799/146044142-2c6c33bb-427c-4326-80a2-a2642bc0833e.png)
 
 You can clic on the NEW->Python 3 Notebook icon on the top right (https://user-images.githubusercontent.com/72798799/146044142-2c6c33bb-427c-4326-80a2-a2642bc0833e.png) and test the code example at the end of this document to verify that everything is working as expected.
