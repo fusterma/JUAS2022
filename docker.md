@@ -106,7 +106,7 @@ If some of them are missing, please install them with, e.g.,
 ### STEP 2: *cpymad* installation
 The standard *anaconda* distribution comes with most of the needed packages but *cpymad*. You can install it following the instructions from https://github.com/hibtc/cpymad. In most of the case it is enough to open a terminal and do
 ```
->> pip install cpymad
+>> pip install cpymad --only-binary cpymad
 ```
 
 ### STEP 3: Jupyter
